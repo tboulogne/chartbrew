@@ -15,4 +15,4 @@ mkdir -p dist
 nohup sh -c 'echo "The UI is rebuilding. Please wait..." && npm run build && echo "UI built successfully!" && cp -rf build/* dist/' &
 
 # Serve the UI
-npx serve -s -p 4018 dist
+NODE_ENV=production npx serve -s -p 4018 client/dist
